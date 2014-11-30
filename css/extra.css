@@ -1,0 +1,51 @@
+body {
+	width: 70%;
+	margin-left: auto;
+    margin-right: auto;
+}
+
+#clock {
+	float: right;
+}
+
+hr	{
+	color: red;
+}
+
+<<<<<<< HEAD
+.team {
+    width : 200px;
+    height : 100px;
+    display : table-cell;
+    vertical-align : middle;
+    border : 1px solid blue;
+    float:none;
+    background-color: #39275B;
+    color: #a84e0f;
+}
+
+h2 {
+    color:#39275B
+}
+
+textarea {
+    border: none;
+}
+
+.gallery img:hover {
+    -webkit-transform: scale(3, 3);
+    transform: scale(3, 3);
+    box-shadow: 10px 10px 5px #888888;
+}
+
+h1 {
+    font-weight: bold;
+=======
+table#tiles {
+	max-width: 20em;
+	display: inline-block;
+	float: left;
+	margin: 1em;
+	vertical-align: center;
+>>>>>>> ce6946f87871e7ca596d783c54bb5670b34fbf75
+}
