@@ -42,6 +42,7 @@ angular.module('CapstonesList', [])
                 .success(function(data) {
                 
                     $scope.capstones = data.results.filter(function(capstone) {
+                        console.log(data.results);
 
                         if ($scope.year == "yearAll" || $scope.year == "") {
                             capstone.year = year.value;
