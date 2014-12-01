@@ -1,51 +1,50 @@
 body {
-	width: 70%;
-	margin-left: auto;
+    width: 70%;
+    margin-left: auto;
     margin-right: auto;
 }
 
 #clock {
-	float: right;
+    float: right;
 }
 
-hr	{
-	color: red;
+hr  {
+    color: red;
 }
 
-<<<<<<< HEAD
-.team {
-    width : 200px;
-    height : 100px;
-    display : table-cell;
-    vertical-align : middle;
-    border : 1px solid blue;
-    float:none;
-    background-color: #39275B;
-    color: #a84e0f;
+table#tiles {
+    max-width: 20em;
+    display: inline-block;
+    float: left;
+    margin: 1em;
+    vertical-align: center;
+    border-radius:5px;
+    background: white;
+    border-radius: 15px;
 }
 
-h2 {
-    color:#39275B
+table img {
+    max-width: 20em;
 }
 
-textarea {
+#likes {
+    float:right;
+}
+
+.glyphicon:hover {
+  color: #d3a82a;
+  box-shadow: #75b0df;
+}
+
+.btn {
+    float: right;
+    color: #403454;
+    background-color: #d3a82a;
     border: none;
 }
 
-.gallery img:hover {
-    -webkit-transform: scale(3, 3);
-    transform: scale(3, 3);
-    box-shadow: 10px 10px 5px #888888;
-}
-
-h1 {
-    font-weight: bold;
-=======
-table#tiles {
-	max-width: 20em;
-	display: inline-block;
-	float: left;
-	margin: 1em;
-	vertical-align: center;
->>>>>>> ce6946f87871e7ca596d783c54bb5670b34fbf75
+.btn:hover {
+    color: #403454;
+    background-color: #eabc4b;
+    border: none;
 }
