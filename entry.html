@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+	    <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="css/main.css"/>
+        <link rel="stylesheet" href="css/extra.css"/> 
+	<title>New project form</title>
+</head>
+<body>
+	<main ng-app="CapstonesList" ng-controller="CapstonesController">
+		<h1>Submission form for Capstone, 2015</h1>
+		<h2>The deadline is <strong>June 1, 2015 11:59pm PST</strong></h2>
+		<h3>
+			Learn about the Process and Requirements <a target="_blank" href="#documentation">here</a>
+			<br>Questions? Email Dowell Eugenio   <a href="mailto:deugen3@uw.edu" target="_top"><img src="img/email.png" alt="Link to send Dowell an Email"></a> 
+			<form id="project-form" action="#parse" method="POST" role="form">
+				<div class="form-group">
+                    <label for="project-name" class="required-field">Project Name</label>
+                    <input type="text" id="project-name" name="projectName" class="form-control"
+                           placeholder="your project name" />
+                </div>
+                <div class="checkbox">
+				    <label class="col-md-6">Choose all that apply</label>
+					    <input type="checkbox"> Software
+					    <br><input type="checkbox"> Wareables
+	
+					    <br><input type="checkbox"> Health
+
+					    <br><input type="checkbox"> Mobile
+
+					    <br><input type="checkbox"> Web
+
+					    <br><input type="checkbox"> Innovation
+
+				</div>
+
+				<div class="form-group">
+				<section class="row">
+
+				<label for="team-name" class="required-field">The team (up to 5)</label>
+                    <div class="col-md-3">
+                    	<label for="team-name" class="required-field">Names</label>
+                    	<input type="text" id="team" name="team" class="form-control"
+                           placeholder="Enter the first and the last name of all team members" />
+                           <input type="text" id="team" name="team" class="form-control"
+                           placeholder="Enter the first and the last name of all team members" />
+                           <input type="text" id="team" name="team" class="form-control"
+                           placeholder="Enter the first and the last name of all team members" />
+                           <input type="text" id="team" name="team" class="form-control"
+                           placeholder="Enter the first and the last name of all team members" />
+                           <input type="text" id="team" name="team" class="form-control"
+                           placeholder="Enter the first and the last name of all team members" />
+
+                    </div>
+
+                    <div class="col-md-3">
+                    	<label for="team" class="required-field">LinkedIn</label>
+                    	<input type="text" id="team" name="team" class="form-control"
+                           placeholder="Enter LinkedIn URL" />
+                        <input type="text" id="team" name="team" class="form-control"
+                           placeholder="Enter LinkedIn URL" />
+                        <input type="text" id="team" name="team" class="form-control"
+                           placeholder="Enter LinkedIn URL" />
+                        <input type="text" id="team" name="team" class="form-control"
+                           placeholder="Enter LinkedIn URL" />
+                        <input type="text" id="team" name="team" class="form-control"
+                           placeholder="Enter LinkedIn URL" />
+                    </div>
+
+
+                    <div class="col-md-3">
+                    	<label for="team" class="required-field">Roles</label>
+                    	<input type="text" id="team" name="team" class="form-control"
+                           placeholder="Enter the roles of all team members" />
+                        <input type="text" id="team" name="team" class="form-control"
+                           placeholder="Enter the roles of all team members" />
+                        <input type="text" id="team" name="team" class="form-control"
+                           placeholder="Enter the roles of all team members" />
+                        <input type="text" id="team" name="team" class="form-control"
+                           placeholder="Enter the roles of all team members" />
+                        <input type="text" id="team" name="team" class="form-control"
+                           placeholder="Enter the roles of all team members" />
+
+                    </div>
+                    
+                    <div class="col-md-3">
+                    	<label for="team" class="required-field">Need the skill</label>
+                    	<div class="checkbox">
+						    <input type="checkbox"> Project Manager
+		
+						    <br><input type="checkbox"> UX Designer
+
+						    <br><input type="checkbox"> Front End Developer 
+
+						    <br><input type="checkbox"> Back End Developer
+
+						    <br><input type="checkbox"> SQL
+
+						    <br><input type="checkbox"> Marketing
+						</div>
+                    </div>
+
+                    <div class="col-md-6">
+                    	<label for="email" class="required-field">Contact Email</label>
+                    	<input type="text" id="email" name="email" class="form-control"
+                           placeholder="Enter your contact email" />
+                    </div>
+
+                    <div class="col-md-8">
+                    	<label for="description" class="required-field">Description</label>
+                    	<textarea type="text" id="description" class="form-control" placeholder="Description"></textarea>
+                    </div>
+
+    				<div class="col-md-6">
+                    	<label for="video">Video</label>
+                    	<input type="text" id="description" name="description" class="form-control"
+                           placeholder="Enter the link to your video" />
+                    </div>
+                    
+                    <div class="col-md-8">
+                    	<br><label for="image" class="required-field">Images (at least one)</label>
+                    	<span class="prettyFile">
+					    	<input type="file" name="form[files][]" multiple="multiple">
+						</span>
+						<span class="prettyFile">
+					    	<input type="file" name="form[files][]" multiple="multiple">
+						</span>
+						<span class="prettyFile">
+					    	<input type="file" name="form[files][]" multiple="multiple">
+						</span>
+						<span class="prettyFile">
+					    	<input type="file" name="form[files][]" multiple="multiple">
+						</span>
+			        </div>
+			        <div class="btn">Save</div>
+                   	<div class="btn">Submit</div>
+                   	
+                   	<span>
+                   		<div class="btn">Cancel</div>
+                   	</span>
+
+
+                  
+                  </section>
+                    
+
+                </div>
+
+			</form>
+
+		</h3>
+
+	</main>
+
+
+</body>
+</html>
