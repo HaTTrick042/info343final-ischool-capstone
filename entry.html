@@ -13,29 +13,27 @@
 		<h2>The deadline is <strong>June 1, 2015 11:59pm PST</strong></h2>
 		<h3>
 			Learn about the Process and Requirements <a target="_blank" href="#documentation">here</a>
-			<br>Questions? Email Dowell Eugenio   <a href="mailto:deugen3@uw.edu" target="_top"><img src="img/email.png" alt="Link to send Dowell an Email"></a> 
+			<br>Questions? Email Dowell Eugenio   <a href="mailto:deugen3@uw.edu" target="_top">deugen3@uw.edu</a> 
 			<form id="project-form" action="#parse" method="POST" role="form">
 				<div class="form-group">
-                    <label for="project-name" class="required-field">Project Name</label>
-                    <input type="text" id="project-name" name="projectName" class="form-control"
-                           placeholder="your project name" />
+                    <label for="capstone-name" class="required-field">Capstone Project Name</label>
+                    <input type="text" id="project-name" name="capstonetName" class="form-control"
+                           placeholder="your capstone project name" ng-model="newCapstone.name"/>
                 </div>
+
+                <label class="col-md-6">Choose all that apply</label>
                 <div class="checkbox">
-				    <label class="col-md-6">Choose all that apply</label>
-					    <input type="checkbox"> Software
+					    <br><input type="checkbox"> Software
 					    <br><input type="checkbox"> Wareables
-	
 					    <br><input type="checkbox"> Health
-
 					    <br><input type="checkbox"> Mobile
-
 					    <br><input type="checkbox"> Web
-
 					    <br><input type="checkbox"> Innovation
 
 				</div>
 
 				<div class="form-group">
+
 				<section class="row">
 
 				<label for="team-name" class="required-field">The team (up to 5)</label>
@@ -101,47 +99,56 @@
 						</div>
                     </div>
 
-                    <div class="col-md-6">
-                    	<label for="email" class="required-field">Contact Email</label>
-                    	<input type="text" id="email" name="email" class="form-control"
-                           placeholder="Enter your contact email" />
+                    <div class="row">
+                    	<div class="col-md-6">
+	                    	<label for="email" class="required-field">Contact Email</label>
+	                    	<input type="text" id="email" name="email" class="form-control"placeholder="Enter your contact email" />
+	                    </div>
                     </div>
 
-                    <div class="col-md-8">
-                    	<label for="description" class="required-field">Description</label>
-                    	<textarea type="text" id="description" class="form-control" placeholder="Description"></textarea>
+                    <div class="row">
+                    	<div class="col-md-8">
+	                    	<label for="description" class="required-field">Description</label>
+	                    	<textarea type="text" id="description" class="form-control" placeholder="Description"></textarea>
+	                    </div>
                     </div>
 
-    				<div class="col-md-6">
-                    	<label for="video">Video</label>
-                    	<input type="text" id="description" name="description" class="form-control"
-                           placeholder="Enter the link to your video" />
+    				<div class="row">
+    					<div class="col-md-6">
+	                    	<label for="video">Video</label>
+	                    	<input type="text" id="description" name="description" class="form-control"
+	                           placeholder="Enter the link to your video" />
+                        </div>
                     </div>
                     
-                    <div class="col-md-8">
-                    	<br><label for="image" class="required-field">Images (at least one)</label>
-                    	<span class="prettyFile">
-					    	<input type="file" name="form[files][]" multiple="multiple">
-						</span>
-						<span class="prettyFile">
-					    	<input type="file" name="form[files][]" multiple="multiple">
-						</span>
-						<span class="prettyFile">
-					    	<input type="file" name="form[files][]" multiple="multiple">
-						</span>
-						<span class="prettyFile">
-					    	<input type="file" name="form[files][]" multiple="multiple">
-						</span>
+                    <div class="row">
+                    	<div class="col-md-6">
+	                    	<br><label for="image" class="required-field">Images (at least one)</label>
+	                    	<span class="prettyFile">
+						    	<input type="file" name="form[files][]" multiple="multiple">
+							</span>
+							<span class="prettyFile">
+						    	<input type="file" name="form[files][]" multiple="multiple">
+							</span>
+							<span class="prettyFile">
+						    	<input type="file" name="form[files][]" multiple="multiple">
+							</span>
+							<span class="prettyFile">
+						    	<input type="file" name="form[files][]" multiple="multiple">
+							</span>
+						</div>
 			        </div>
-			        <div class="btn">Save</div>
-                   	<div class="btn">Submit</div>
-                   	
-                   	<span>
-                   		<div class="btn">Cancel</div>
-                   	</span>
-
-
-                  
+			        <div class="row">
+			        	<div class="col-md-5">
+				        	<div class="btn">Save</div>
+				        </div>
+	                   	<div class="col-md-5">
+				        	<div class="btn">Submit</div>
+				        </div>
+				        <div class="col-md-4">
+				        	<div class="btn">Cancel</div>
+				        </div>
+	                </div>                  
                   </section>
                     
 

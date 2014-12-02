@@ -67,13 +67,19 @@
                   <div>
                       <table id="tiles" ng-repeat="capstone in capstones">
                           <tr>
+                            
                               <td>
-                                 <img src="{{capstone.image.url}}">
-                                 <h3>{{capstone.title}}</h3>
-                                 <p>{{capstone.description}}</p>
-                                 <br><p id="likes">{{capstone.likes || 0}}
-                              <span id="hover" class="glyphicon glyphicon-thumbs-up" ng-click="incrementLikes(capstone, 1)"></span>
+                                <a href="project.html" id="projectText">
+                                  <div>
+                                    <img src="{{capstone.image.url}}">
+                                    <h3>{{capstone.title}}</h3>
+                                    <p>{{capstone.description}}</p>
+                                  </div>
+                                </a>
+                                <br><p id="likes">{{capstone.likes || 0}}
+                                <span id="hover" class="glyphicon glyphicon-thumbs-up" ng-click="incrementLikes(capstone, 1)"></span> 
                               </td>
+                            
                           </tr>
                       </table>
                   </div>

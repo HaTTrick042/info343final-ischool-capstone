@@ -49,6 +49,7 @@ table img {
     border: none;
 }
 
+<<<<<<< HEAD
 .btn-file {
     position: relative;
     overflow: hidden;
@@ -68,3 +69,43 @@ table img {
     cursor: inherit;
     display: block;
 }
+=======
+#projectText {
+    text-decoration: none;
+    color: #000000;
+}
+
+#projectText:hover {
+    opacity: 0.5;
+
+}
+
+.team {
+    width : 200px;
+    height : 100px;
+    display : table-cell;
+    vertical-align : middle;
+    border : 1px solid blue;
+    float:none;
+    background-color: #39275B;
+    color: #a84e0f;
+}
+
+h2 {
+    color:#39275B
+}
+
+textarea {
+    border: none;
+}
+
+.gallery img:hover {
+    -webkit-transform: scale(3, 3);
+    transform: scale(3, 3);
+    box-shadow: 10px 10px 5px #888888;
+}
+
+h1 {
+    font-weight: bold;
+}
+>>>>>>> 287256469598352c6d630bfff23f07e73049b7b0

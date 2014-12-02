@@ -64,6 +64,20 @@ angular.module('CapstonesList', [])
 
         };
 
+        $scope.newProjects = {done: false};
+
+
+        $scope.addProject = function() {
+            $http.post(projectsUrl, $scope.newProjects).success(function(responseData) {
+                $scope.newProjects.objectId = responseData.objectId;
+                $scope.tasks.push($scope.newProjects);
+                $scope.newProjects = {done: false};
+
+
+            }).error(function(err) {
+                $scope.errorMessage = err;
+            });
+        };
 
         $scope.addCapstones = function() {
             $scope.inserting = true;
@@ -71,8 +85,6 @@ angular.module('CapstonesList', [])
                 .success(function(responseData) {
                     $scope.newCapstone.objectId = responseData.objectId;
                     $scope.capstones.push($scope.newCapstone);
-                    // $scope.newCapstone = {remove: false};
-                    // $scope.successfulFeed = true;
                     $scope.refreshCapstones();
 
                 })
