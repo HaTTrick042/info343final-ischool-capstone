@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+	    <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="css/main.css"/>
+        <link rel="stylesheet" href="css/extra.css"/> 
+        <title>New Entry</title>
+    </head>
+
+    <body>
+	    <main ng-app="CapstonesList" ng-controller="CapstonesController">
+		    <h1>Submission form for Capstone, 2015</h1>
+		    <h2>The deadline is <strong>June 1, 2015 11:59pm PST</strong></h2>
+		    <h3>Learn about the Process and Requirements <a target="_blank" href="#documentation">here</a>
+			<br>Questions? Email Dowell Eugenio   <a href="mailto:deugen3@uw.edu" target="_top">deugen3@uw.edu</a></h3>
+			<form id="project-form" action="#parse" method="POST" role="form">
+
+				<div class="form-group">
+                    <label for="capstone-name" class="required-field">Capstone Project Name</label>
+                    <input type="text" id="project-name" name="capstoneName" class="form-control"
+                           placeholder="your capstone project name" ng-model="newCapstone.name"/>
+                </div>
+
+                <label class="col-md-6">Choose all that apply</label>
+                <div class="checkbox">
+                    <label>
+                        <br><input type="checkbox"> Software
+                        <br><input type="checkbox"> Wareables
+                        <br><input type="checkbox"> Health
+                        <br><input type="checkbox"> Mobile
+                        <br><input type="checkbox"> Web
+                        <br><input type="checkbox"> Innovation
+                    </label>
+				</div>
+
+				<div class="form-group">
+
+				<section class="row">
+
+				<label for="team-name" class="required-field">The team (up to 5)</label>
+                    <div class="col-md-3">
+                    	<label for="team-name" class="required-field">Names</label>
+                    	<input type="text" id="team" name="team" class="form-control"
+                           placeholder="Enter the first and the last name of all team members" />
+                           <input type="text" id="team" name="team" class="form-control"
+                           placeholder="Enter the first and the last name of all team members" />
+                           <input type="text" id="team" name="team" class="form-control"
+                           placeholder="Enter the first and the last name of all team members" />
+                           <input type="text" id="team" name="team" class="form-control"
+                           placeholder="Enter the first and the last name of all team members" />
+                           <input type="text" id="team" name="team" class="form-control"
+                           placeholder="Enter the first and the last name of all team members" />
+
+                    </div>
+
+                    <div class="col-md-3">
+                    	<label for="team" class="required-field">LinkedIn</label>
+                    	<input type="text" id="team" name="team" class="form-control"
+                           placeholder="Enter LinkedIn URL" />
+                        <input type="text" id="team" name="team" class="form-control"
+                           placeholder="Enter LinkedIn URL" />
+                        <input type="text" id="team" name="team" class="form-control"
+                           placeholder="Enter LinkedIn URL" />
+                        <input type="text" id="team" name="team" class="form-control"
+                           placeholder="Enter LinkedIn URL" />
+                        <input type="text" id="team" name="team" class="form-control"
+                           placeholder="Enter LinkedIn URL" />
+                    </div>
+
+
+                    <div class="col-md-3">
+                    	<label for="team" class="required-field">Roles</label>
+                    	<input type="text" id="team" name="team" class="form-control"
+                           placeholder="Enter the roles of all team members" />
+                        <input type="text" id="team" name="team" class="form-control"
+                           placeholder="Enter the roles of all team members" />
+                        <input type="text" id="team" name="team" class="form-control"
+                           placeholder="Enter the roles of all team members" />
+                        <input type="text" id="team" name="team" class="form-control"
+                           placeholder="Enter the roles of all team members" />
+                        <input type="text" id="team" name="team" class="form-control"
+                           placeholder="Enter the roles of all team members" />
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="team" class="required-field">Need the skill</label>
+                        <div class="col-md-3">
+                            <select name="job" id="job" class="form-control">
+                                <option value="" selcted disabled>Select...</option>
+                                <option value="projectManager">Project Manager</option>
+                                <option value="UXDesigner">UX Designer</option>
+                                <option value="FrontEndDeveloper">Front End Developer</option>
+                                <option value="BackEndDeveloper">Back End Developer</option>
+                                <option value="SQL">SQL</option>
+                                <option value="Marketing">Marketing</option>
+                            </select>
+                        </div>
+                    
+                    <div class="row">
+                    	<div class="col-md-6">
+	                    	<label for="email" class="required-field">Contact Email</label>
+	                    	<input type="text" id="email" name="email" class="form-control"placeholder="Enter your contact email" />
+	                    </div>
+                    </div>
+
+                    <div class="row">
+                    	<div class="col-md-8">
+	                    	<label for="description" class="required-field">Description</label>
+	                    	<textarea type="text" id="description" class="form-control" placeholder="Description"></textarea>
+	                    </div>
+                    </div>
+
+    				<div class="row">
+    					<div class="col-md-6">
+	                    	<label for="video">Video</label>
+	                    	<input type="text" id="description" name="description" class="form-control"
+	                           placeholder="Enter the link to your video" />
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                    	<div class="col-md-6">
+	                    	<br><label for="image" class="required-field">Images (at least one)</label>
+	                    	<span class="prettyFile">
+						    	<input type="file" name="form[files][]" multiple="multiple">
+							</span>
+							<span class="prettyFile">
+						    	<input type="file" name="form[files][]" multiple="multiple">
+							</span>
+							<span class="prettyFile">
+						    	<input type="file" name="form[files][]" multiple="multiple">
+							</span>
+							<span class="prettyFile">
+						    	<input type="file" name="form[files][]" multiple="multiple">
+							</span>
+						</div>
+			        </div>
+
+			        <div class="row">
+
+				        	<div class="btn">Save</div>
+<<<<<<< HEAD
+				        </div>
+	                   	<div class="col-md-4">
+				        	<div class="btn">Submit</div>
+				        </div>
+				        <div class="col-md-3">
+=======
+
+
+				        	<div class="btn">Submit</div>
+
+
+>>>>>>> 1b2e72610e0585578837918eb4f9e863e1d44e2a
+				        	<div class="btn">Cancel</div>
+
+	                </div>                  
+                  </section>
+                    
+
+                </div>
+	</main>
+
+
+</body>
+</html>

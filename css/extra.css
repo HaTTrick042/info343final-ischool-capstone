@@ -49,6 +49,27 @@ table img {
     border: none;
 }
 
+<<<<<<< HEAD
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+=======
 #projectText {
     text-decoration: none;
     color: #000000;
@@ -87,3 +108,4 @@ textarea {
 h1 {
     font-weight: bold;
 }
+>>>>>>> 287256469598352c6d630bfff23f07e73049b7b0
