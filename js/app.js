@@ -71,8 +71,6 @@ angular.module('CapstonesList', [])
                 .success(function(responseData) {
                     $scope.newCapstone.objectId = responseData.objectId;
                     $scope.capstones.push($scope.newCapstone);
-                    // $scope.newCapstone = {remove: false};
-                    // $scope.successfulFeed = true;
                     $scope.refreshCapstones();
 
                 })

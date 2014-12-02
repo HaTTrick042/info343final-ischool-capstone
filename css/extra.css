@@ -48,3 +48,13 @@ table img {
     background-color: #eabc4b;
     border: none;
 }
+
+#projectText {
+    text-decoration: none;
+    color: #000000;
+}
+
+#projectText:hover {
+    opacity: 0.5;
+
+}
