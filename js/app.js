@@ -1,4 +1,3 @@
-
 "use strict";
 
 var capstonesUrl = 'https://api.parse.com/1/classes/capstones';
