@@ -112,6 +112,35 @@ angular.module('CapstonesList', [])
 
         };
 
+        $scope.changePic = function(pic) {
+            console.log(pic);
+            document.getElementById("img-main").src = pic;
+        };
+
+    })
+
+    .controller('ProjectController', function($scope, $http) {
+
+        $scope.getCapstone = function() {
+
+            var newUrl = window.location.pathname+window.location.search;
+            var urlArray = newUrl.split( '=' );
+            var objectId = urlArray[1];
+            console.log(objectId);
+
+
+            $http.get(capstonesUrl + '/' + objectId)
+                .success(function(data) {
+                    // console.log(capstonesUrl + '/' + objectId);
+
+                    $scope.capstones = data.results;
+                    console.log($scope.capstones);
+                });
+
+
+        };
+
+        $scope.getCapstone();
     });
 
 // Pretty file
