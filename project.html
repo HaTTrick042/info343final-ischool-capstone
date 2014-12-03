@@ -12,7 +12,7 @@
 
         <title>Projects Page</title>
     </head>
-    <body ng-app="CapstonesList" ng-controller="CapstonesController">
+    <body ng-app="CapstonesList" ng-controller="ProjectController">
         <main class="container" ng-repeat="capstone in capstones">
             <section id="Name">
                 <div class="row col-xs-12">
@@ -38,16 +38,16 @@
                     <div class="row col-xs-8">
                         <p></p>
                         <div class="col-xs-2">
-                            <img class="img-responsive thumbnail" src="{{capstone.image.url}}" alt="Thumb 1">
+                            <img class="img-responsive thumbnail" src="{{capstone.image.url}}" alt="Thumb 1" ng-click="changePic(capstone.image.url)">
                         </div>
                         <div class="col-xs-2">
-                            <img class="img-responsive thumbnail" src="{{capstone.image2.url}}" alt="Thumb 2">
+                            <img class="img-responsive thumbnail" src="{{capstone.image2.url}}" alt="Thumb 2" ng-click="changePic(capstone.image2.url)">
                         </div>
                         <div class="col-xs-2">
-                            <img class="img-responsive thumbnail" src="{{capstone.image3.url}}" alt="Thumb 3">
+                            <img class="img-responsive thumbnail" src="{{capstone.image3.url}}" alt="Thumb 3" ng-click="changePic(capstone.image3.url)">
                         </div>
                         <div class="col-xs-2">
-                            <img class="img-responsive thumbnail" src="{{capstone.image4.url}}" alt="Thumb 4">
+                            <img class="img-responsive thumbnail" src="{{capstone.image4.url}}" alt="Thumb 4" ng-click="changePic(capstone.image4.url)">
                         </div>
                     </div>
                 </section>

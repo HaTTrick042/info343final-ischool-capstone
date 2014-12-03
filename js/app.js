@@ -112,36 +112,40 @@ angular.module('CapstonesList', [])
 
         };
 
-        $scope.changePic = function(pic) {
-            console.log(pic);
-            document.getElementById("img-main").src = pic;
-        };
-
     })
 
     .controller('ProjectController', function($scope, $http) {
-
         $scope.getCapstone = function() {
 
             var newUrl = window.location.pathname+window.location.search;
-            var urlArray = newUrl.split( '=' );
+            var urlArray = newUrl.split('=');
             var objectId = urlArray[1];
-            console.log(objectId);
 
-
-            $http.get(capstonesUrl + '/' + objectId)
+            $http.get(capstonesUrl)
                 .success(function(data) {
-                    // console.log(capstonesUrl + '/' + objectId);
-
-                    $scope.capstones = data.results;
-                    console.log($scope.capstones);
+                    $scope.capstones = data.results.filter(function(project) {
+                        console.log("are you getting here");
+                        return (project.objectId == objectId);
+                    });
                 });
+            // $http.get(capstonesUrl + '/' + objectId)
+            //     // console.log(capstonesUrl + '/' + objectId)
+            //     .success(function(data) {
+
+            //         $scope.capstones = data.results;
+            //         console.log($scope.capstones);
 
 
+            //     });
         };
-
         $scope.getCapstone();
+
+        $scope.changePic = function(imgSrc) {
+            document.getElementById("img-main").src = imgSrc;
+
+        }
     });
+
 
 // Pretty file
 if ($('.prettyFile').length) {

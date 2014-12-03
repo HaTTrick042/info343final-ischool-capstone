@@ -49,7 +49,6 @@ table img {
     border: none;
 }
 
-<<<<<<< HEAD
 .btn-file {
     position: relative;
     overflow: hidden;
@@ -69,7 +68,7 @@ table img {
     cursor: inherit;
     display: block;
 }
-=======
+
 #projectText {
     text-decoration: none;
     color: #000000;
@@ -108,4 +107,3 @@ textarea {
 h1 {
     font-weight: bold;
 }
->>>>>>> 287256469598352c6d630bfff23f07e73049b7b0
