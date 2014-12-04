@@ -121,3 +121,7 @@ td {
 #submitButton {
     margin-right: 1em;
 }
+
+#hover {
+    cursor: pointer;
+}
