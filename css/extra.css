@@ -126,6 +126,18 @@ td {
     cursor: pointer;
 }
 
+
+#img-main {
+    border: 5px solid #FFFFFF;
+}
+
+#tiles {
+    margin-bottom: 1em;
+    margin-top: 1em;
+    font-size: 30px;
+    text-align: left;
+}
+
 #upperText {
     background: none;
     background-color: ;
