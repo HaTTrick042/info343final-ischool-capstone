@@ -5,23 +5,46 @@ var capstonesUrl = 'https://api.parse.com/1/classes/capstones';
 
 angular.module('CapstonesList', [])
     .config(function($httpProvider) {
-
         $httpProvider.defaults.headers.common['X-Parse-Application-Id'] = 'LPLyK3Gy2gc4VHUW143qhkZXSblTUC1jzRdwC7AY';
         $httpProvider.defaults.headers.common['X-Parse-REST-API-Key'] = 'Tyu8ovkDEuLhi6TvX8gBRbJQazvXJSRRFigEu9gl';
-
     })
-
     .controller('CapstonesController', function($scope, $http) {
-
-        //refreshes the list of comments by getting feed from parse.com
         $scope.refreshCapstones = function() {
             $http.get(capstonesUrl)
                 .success(function(data) {
-
                     $scope.capstones = data.results;
-
                 });
-            
+        };
+        $scope.refreshCapstones();
+
+        $scope.addCapstones = function() {
+            $scope.inserting = true;
+            $http.post(capstonesUrl, $scope.newCapstone)
+                .success(function(responseData) {
+                    $scope.newCapstone.objectId = responseData.objectId;
+                    $scope.capstones.push($scope.newCapstone);
+                    $scope.refreshCapstones();
+
+                })
+                .finally(function() {
+                    $scope.inserting = false;
+                });
+        };
+
+        $scope.updateCapstones = function(comment) {
+            $http.put(capstonesUrl + '/' + comment.objectId, comment)
+                .success(function() {
+                });
+        };
+
+        $scope.submit = function() {
+            alert('Submitted!');
+        };
+
+        $scope.cancel = function($location) {
+            if (window.confirm("Do you really want to leave?")) {
+                window.location = 'index.html';
+            }
         };
 
         $scope.year="";
@@ -78,19 +101,6 @@ angular.module('CapstonesList', [])
             });
         };
 
-        $scope.addCapstones = function() {
-            $scope.inserting = true;
-            $http.post(capstonesUrl, $scope.newCapstone)
-                .success(function(responseData) {
-                    $scope.newCapstone.objectId = responseData.objectId;
-                    $scope.capstones.push($scope.newCapstone);
-                    $scope.refreshCapstones();
-
-                })
-                .finally(function() {
-                    $scope.inserting = false;
-                });
-        };
 
         $scope.incrementLikes = function(capstone, amount) {
             $scope.updating = true;
@@ -150,31 +160,31 @@ angular.module('CapstonesList', [])
 
 
 // Pretty file
-if ($('.prettyFile').length) {
-    $('.prettyFile').each(function() {
-        var pF          = $(this),
-            fileInput   = pF.find('input[type="file"]');
- 
-        fileInput.change(function() {
-            // When original file input changes, get its value, show it in the fake input
-            var files = fileInput[0].files,
-                info  = '';
-            if (files.length > 1) {
-                // Display number of selected files instead of filenames
-                info     = files.length + ' files selected';
-            } else {
-                // Display filename (without fake path)
-                var path = fileInput.val().split('\\');
-                info     = path[path.length - 1];
-            }
- 
-            pF.find('.input-append input').val(info);
-        });
- 
-        pF.find('.input-append').click(function(e) {
-            e.preventDefault();
-            // Make as the real input was clicked
-            fileInput.click();
-        })
-    });
-}
+//if ($('.prettyFile').length) {
+//    $('.prettyFile').each(function() {
+//        var pF          = $(this),
+//            fileInput   = pF.find('input[type="file"]');
+//
+//        fileInput.change(function() {
+//            // When original file input changes, get its value, show it in the fake input
+//            var files = fileInput[0].files,
+//                info  = '';
+//            if (files.length > 1) {
+//                // Display number of selected files instead of filenames
+//                info     = files.length + ' files selected';
+//            } else {
+//                // Display filename (without fake path)
+//                var path = fileInput.val().split('\\');
+//                info     = path[path.length - 1];
+//            }
+//
+//            pF.find('.input-append input').val(info);
+//        });
+//
+//        pF.find('.input-append').click(function(e) {
+//            e.preventDefault();
+//            // Make as the real input was clicked
+//            fileInput.click();
+//        })
+//    });
+//}
