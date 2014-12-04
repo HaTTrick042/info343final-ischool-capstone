@@ -76,7 +76,6 @@ table img {
 
 #projectText:hover {
     opacity: 0.5;
-
 }
 
 .team {
@@ -85,12 +84,12 @@ table img {
     display : table-cell;
     vertical-align : middle;
     border : 2px solid #a84e0f;
-    float:none;
+    float: none;
     background-color: #39275B;
     color: #a84e0f;
 }
 
-h2 {
+#share, #Description {
     color:#39275B
 }
 
@@ -98,12 +97,12 @@ textarea {
     border: none;
 }
 
-.gallery img:hover {
-    -webkit-transform: scale(3, 3);
-    transform: scale(3, 3);
-    box-shadow: 10px 10px 5px #888888;
+#name {
+    font-weight: bold;
 }
 
-h1 {
-    font-weight: bold;
+#project-description {
+    height: 150px;
+    text-align: left;
+
 }
