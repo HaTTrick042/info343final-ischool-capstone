@@ -4,14 +4,15 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
         <link rel="stylesheet" href="css/main.css"/>
-        <link rel="stylesheet" href="css/extra.css"/> 
+        <link rel="stylesheet" href="css/extra.css"/>
+        <link rel="icon" href="img/iSchool-logo.png">
 
-        <title>This is our project</title>
+        <title>iSchool Capstone Index</title>
     </head>
-    <body>
+    <body class="container-fluid">
           <main ng-app="CapstonesList" ng-controller="CapstonesController">
                 <section id="content">
-                  <h1>Welcome to the Information School Capstones</h1>
+                  <h1>Welcome to the Information School Capstones Page</h1>
                   <h2>Search for the Capstones here</h2>
                   <hr>
                   <section class="row">
@@ -31,20 +32,22 @@
                       <label for="category" class="col-sm-2 control-label">Show me</label>
                       <div class="col-sm-2">
                           <select name="category" id="category" class="form-control" ng-model="category" ng-change="filter()">
-                              <option value="" selected disabled>category</option>
-                              <option value="categoryAll">all</option>
-                              <option value="category1">Category1</option>
-                              <option value="category2">Category2</option>
-                              <option value="category3">Category3</option>
-                              <option value="category4">Category4</option>
+                              <option value="" selected disabled>Category</option>
+                              <option value="categoryAll">All</option>
+                              <option value="category1">Software</option>
+                              <option value="category2">Wearables</option>
+                              <option value="category3">Health</option>
+                              <option value="category4">Mobile</option>
+                              <option value="category5">Web</option>
+                              <option value="category6">Innovation</option>
                           </select>
                       </div>
 
-                      <label for="year" class="col-sm-2 control-label">projects for</label>
+                      <label for="year" class="col-sm-2 control-label">Projects for</label>
                       <div class="col-sm-2">
                           <select name="year" id="year" class="form-control" ng-model="year" ng-change="filter()">
-                              <option value="" selected disabled>year</option>
-                              <option value="yearAll">all</option>
+                              <option value="" selected disabled>Year</option>
+                              <option value="yearAll">All</option>
                               <option value="2015">2015</option>
                               <option value="2014">2014</option>
                               <option value="2013">2013</option>
@@ -52,11 +55,11 @@
                           </select>
                       </div>
 
-                      <label for="program" class="col-sm-2 control-label">sorted by</label>
+                      <label for="program" class="col-sm-2 control-label">Sorted by</label>
                       <div class="col-sm-2">
                           <select name="program" id="program" class="form-control" ng-model="program" ng-change="filter()">
-                              <option value="" selected disabled>program</option>
-                              <option value="sortedAll">all</option>
+                              <option value="" selected disabled>Program</option>
+                              <option value="sortedAll">All</option>
                               <option value="info">INFO</option>
                               <option value="mlis">MLIS</option>
                               <option value="msim">MSIM</option>
@@ -65,25 +68,29 @@
                   </div>
 
                   <div>
-                      <table id="tiles" ng-repeat="capstone in capstones">
+                      <table class="col-md-4" id="tiles" ng-repeat="capstone in capstones">
                           <tr>
-                            
                               <td>
-                                <a href="project.html?={{capstone.objectId}}" id="projectText">
-                                  <div>
-                                    <img src="{{capstone.image.url}}">
-                                    <h3>{{capstone.title}}</h3>
-                                    <p>{{capstone.description}}</p>
-                                  </div>
-                                </a>
-                                <br><p id="likes">{{capstone.likes || 0}}
-                                <span id="hover" class="glyphicon glyphicon-thumbs-up" ng-click="incrementLikes(capstone, 1)"></span> 
+                                  <a href="project.html?={{capstone.objectId}}" id="projectText">
+                                      <div id="projectImgDisplay">
+                                          <img src="{{capstone.image.url}}">
+                                      </div>
+                                      <div id="projectTextDisplay">
+                                          <h3>{{capstone.title}}</h3>
+                                      </div>
+                                      <div id="projectTextBody">
+                                          <textarea id="projectDescr" cols="42" rows="15" disabled>
+                                              {{capstone.description}}
+                                          </textarea>
+                                      </div>
+                                  </a>
+                                  <br><p id="likes">{{capstone.likes || 0}}
+                                  <span id="hover" class="glyphicon glyphicon-thumbs-up" ng-click="incrementLikes(capstone, 1)"></span>
                               </td>
-                            
                           </tr>
                       </table>
                   </div>
-          </section>
+            </section>
         </main>
         
     </body>

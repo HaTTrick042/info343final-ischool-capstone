@@ -12,19 +12,14 @@ hr  {
     color: red;
 }
 
-table#tiles {
-    max-width: 20em;
-    display: inline-block;
-    float: left;
-    margin: 1em;
-    vertical-align: center;
-    border-radius:5px;
+#tiles {
     background: white;
-    border-radius: 15px;
-}
-
-table img {
-    max-width: 20em;
+    height: 50em;
+    border-radius: 5em;
+    border-collapse: collapse;
+    border: none;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
 }
 
 #likes {
@@ -83,18 +78,19 @@ table img {
     height : 100px;
     display : table-cell;
     vertical-align : middle;
-    border : 2px solid #a84e0f;
+    border : 2px solid #D7A900;
     float: none;
     background-color: #39275B;
-    color: #a84e0f;
+    color: #D7A900;
 }
 
 #share, #Description {
     color:#39275B
 }
 
-textarea {
+#projectDescr {
     border: none;
+    text-align: justify;
 }
 
 #name {
@@ -104,5 +100,20 @@ textarea {
 #project-description {
     height: 150px;
     text-align: left;
+}
 
+#projectImgDisplay {
+    border-radius: 10px;
+    width: 21em;
+    position: inherit;
+    padding-bottom: 3em;
+}
+
+td {
+    border: hidden;
+}
+
+#projectTextDisplay {
+    font-weight: bold;
+    font-size: 18px;
 }

@@ -141,6 +141,9 @@ angular.module('CapstonesList', [])
 
         $scope.changePic = function(imgSrc) {
             document.getElementById("img-main").src = imgSrc;
+        };
+
+        $scope.banner = function() {
 
         }
     });
