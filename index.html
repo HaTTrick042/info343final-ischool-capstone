@@ -13,7 +13,9 @@
           <main ng-app="CapstonesList" ng-controller="CapstonesController">
                 <section id="content">
                   <h1>Welcome to the Information School Capstones Page</h1>
-                  <h2>Search for the Capstones here</h2>
+                  <section id="upperText">
+                      <h2>Search for the Capstones here</h2>
+                  </section>
                   <hr>
                   <section class="row">
                     <div class="col-md-6">
@@ -68,7 +70,7 @@
                   </div>
 
                   <div>
-                      <table class="col-md-4" id="tiles" ng-repeat="capstone in capstones">
+                      <table class="col-md-4 col-l-3 col-xl-2" id="tiles" ng-repeat="capstone in capstones">
                           <tr>
                               <td>
                                   <a href="project.html?={{capstone.objectId}}" id="projectText">
