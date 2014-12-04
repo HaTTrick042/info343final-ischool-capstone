@@ -90,7 +90,6 @@ hr  {
 
 #projectDescr {
     border: none;
-    text-align: justify;
 }
 
 #name {
@@ -104,7 +103,7 @@ hr  {
 
 #projectImgDisplay {
     border-radius: 10px;
-    width: 21em;
+    width: 42em;
     position: inherit;
     padding-bottom: 3em;
 }
@@ -140,5 +139,4 @@ td {
 
 #upperText {
     background: none;
-    background-color: ;
 }

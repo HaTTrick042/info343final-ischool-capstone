@@ -16,12 +16,12 @@
     <body ng-app="CapstonesList" ng-controller="ProjectController">
         <main class="container" ng-repeat="capstone in capstones">
             <section id="Name">
-                <div class="row col-xs-8">
+                <div class="row col-xs-8 col-xl-8">
                     <p></p>
                     <h1>{{capstone.title}}</h1>
                     <p></p>
                 </div>
-                <div class="row col-xs-4" id="share">
+                <div class="row col-xs-4 col-xl-4" id="share">
                     <p></p>
                     <h2>Share this Project</h2>
                     <a href="https://www.facebook.com/sharer/sharer.php?u=http://www.sharelinkgenerator.com/"><img src="img/Facebook-icon.png" alt="Facebook"/></a>
@@ -33,26 +33,26 @@
             </section>
 
             <section id="Overview">
-                <div class="row col-xs-7">
+                <div class="row col-xs-7  col-xl-7">
                     <img id="img-main" src="{{capstone.image.url}}" alt="Project Banner"/>
                 </div>
-                <div class="row col-xs-1">
+                <div class="row col-xs-1 col-xl-1">
                     <p></p>
                 </div>
 
                 <section class="gallery">
-                    <div class="row col-xs-8">
+                    <div class="row col-xs-8 col-xl-8">
                         <p></p>
-                        <div class="col-xs-2">
+                        <div class="col-xs-2 col-xl-2">
                             <img class="img-responsive thumbnail" src="{{capstone.image.url}}" alt="Thumb 1" ng-click="changePic(capstone.image.url)">
                         </div>
-                        <div class="col-xs-2">
+                        <div class="col-xs-2 col-xl-2">
                             <img class="img-responsive thumbnail" src="{{capstone.image2.url}}" alt="Thumb 2" ng-click="changePic(capstone.image2.url)" ng-hide="capstone.image2.url == null">
                         </div>
-                        <div class="col-xs-2">
+                        <div class="col-xs-2 col-xl-2">
                             <img class="img-responsive thumbnail" src="{{capstone.image3.url}}" alt="Thumb 3" ng-click="changePic(capstone.image3.url)" ng-hide="capstone.image3.url == null">
                         </div>
-                        <div class="col-xs-2">
+                        <div class="col-xs-2 col-xl-2">
                             <img class="img-responsive thumbnail" src="{{capstone.image4.url}}" alt="Thumb 4" ng-click="changePic(capstone.image4.url)" ng-hide="capstone.image4.url == null">
                         </div>
                     </div>
@@ -60,7 +60,7 @@
             </section>
 
             <section id="Description">
-                <div class="row col-xs-7">
+                <div class="row col-xs-7 col-xl-7">
                     <h2>Project Description</h2>
                     <p></p>
                     <textarea id="Text" cols="103" rows="15" disabled>{{capstone.description}}</textarea>
@@ -69,7 +69,7 @@
             </section>
 
             <section id="Team">
-                <div class="row col-xs-4 span6 team">
+                <div class="row col-xs-4 col-xl-4 span6 team">
                     <p></p>
                     <h3>Team Info</h3>
                     <p></p>
