@@ -127,7 +127,7 @@ hr  {
 }
 
 #submitButton {
-    margin-left: 1em;
+    margin-right: 1em;
 }
 
 .hover {
@@ -143,6 +143,8 @@ hr  {
 #upperText {
     background: none;
 }
+
+
 
 
 form-group {
@@ -186,8 +188,4 @@ h1.tiles {
 
 p.blurb {
 
-}
-
-.imageInput {
-    margin-bottom: 0.5em;
 }
