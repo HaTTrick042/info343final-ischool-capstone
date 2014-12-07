@@ -2,24 +2,32 @@ body {
     width: 70%;
     margin-left: auto;
     margin-right: auto;
+    background:#ebebeb;
+    font-family:'Ubuntu', sans-serif;
+    color:#363636;
+    font-size:13px;
+    line-height:1.7em;
+    -webkit-font-smoothing:antialiased;
+    font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+    position:relative;
+    height:auto !important;
+    min-height:100%;
 }
 
-#clock {
-    float: right;
+#countdown{
+    font-size: 0.5em;
+    color:red;
 }
 
 hr  {
     color: red;
 }
 
-#tiles {
-    background: white;
-    height: 50em;
-    border-radius: 5em;
-    border-collapse: collapse;
-    border: none;
-    -moz-border-radius:10px;
-    -webkit-border-radius:10px;
+#wrap {
+
+    border: 2px solid white;
+    border-radius: 15px;
 }
 
 #likes {
@@ -101,6 +109,10 @@ hr  {
     text-align: left;
 }
 
+#inputPostMessage {
+    height: 100px;
+}
+
 #projectImgDisplay {
     border-radius: 10px;
     width: 42em;
@@ -108,9 +120,6 @@ hr  {
     padding-bottom: 3em;
 }
 
-td {
-    border: hidden;
-}
 
 #projectTextDisplay {
     font-weight: bold;
@@ -121,22 +130,62 @@ td {
     margin-right: 1em;
 }
 
-#hover {
+.hover {
     cursor: pointer;
 }
 
 
 #img-main {
-    border: 5px solid #FFFFFF;
+    border: 2px solid #FFFFFF;
 }
 
-#tiles {
-    margin-bottom: 1em;
-    margin-top: 1em;
-    font-size: 30px;
-    text-align: left;
-}
 
 #upperText {
     background: none;
+}
+
+
+
+
+form-group {
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+.is-error {
+    border: 1px solid #FF0000;
+}
+
+.row-xs-height {
+    display:table-row;
+}
+
+
+img.tiles {
+    min-width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 150px;
+    width: 100px;
+    float: left;
+    margin: 1px;
+    position: relative;
+}
+
+.blurb {
+    min-height: 90px;
+}
+
+.tile {
+    margin-bottom: 30px;
+    background-color: 
+}
+
+h1.tiles {
+
+}
+
+p.blurb {
+
 }
