@@ -23,7 +23,7 @@ angular.module('CapstonesList', [])
                 .success(function(responseData) {
                     $scope.newCapstone.objectId = responseData.objectId;
                     $scope.capstones.push($scope.newCapstone);
-                    $scope.refreshCapstones();
+                    // $scope.refreshCapstones();
 
                 })
                 .finally(function() {
@@ -31,14 +31,14 @@ angular.module('CapstonesList', [])
                 });
         };
 
-        $scope.updateCapstones = function(comment) {
-            $http.put(capstonesUrl + '/' + comment.objectId, comment)
-                .success(function() {
-                });
-        };
-
-        $scope.submit = function() {
-            alert('Submitted!');
+        $scope.submitForm = function(isValid) {
+            // check to make sure the form is completely valid
+            $scope.submitted = true;
+            if (isValid) {
+                $scope.addCapstones();
+                alert('Your entry has been received!');
+                $scope.submitted = false;
+            }
         };
 
         $scope.cancel = function($location) {
@@ -84,21 +84,6 @@ angular.module('CapstonesList', [])
 
                 });
 
-        };
-
-        $scope.newProjects = {done: false};
-
-
-        $scope.addProject = function() {
-            $http.post(projectsUrl, $scope.newProjects).success(function(responseData) {
-                $scope.newProjects.objectId = responseData.objectId;
-                $scope.tasks.push($scope.newProjects);
-                $scope.newProjects = {done: false};
-
-
-            }).error(function(err) {
-                $scope.errorMessage = err;
-            });
         };
 
 
@@ -153,38 +138,5 @@ angular.module('CapstonesList', [])
             document.getElementById("img-main").src = imgSrc;
         };
 
-        $scope.banner = function() {
-
-        }
     });
 
-
-// Pretty file
-//if ($('.prettyFile').length) {
-//    $('.prettyFile').each(function() {
-//        var pF          = $(this),
-//            fileInput   = pF.find('input[type="file"]');
-//
-//        fileInput.change(function() {
-//            // When original file input changes, get its value, show it in the fake input
-//            var files = fileInput[0].files,
-//                info  = '';
-//            if (files.length > 1) {
-//                // Display number of selected files instead of filenames
-//                info     = files.length + ' files selected';
-//            } else {
-//                // Display filename (without fake path)
-//                var path = fileInput.val().split('\\');
-//                info     = path[path.length - 1];
-//            }
-//
-//            pF.find('.input-append input').val(info);
-//        });
-//
-//        pF.find('.input-append').click(function(e) {
-//            e.preventDefault();
-//            // Make as the real input was clicked
-//            fileInput.click();
-//        })
-//    });
-//}
