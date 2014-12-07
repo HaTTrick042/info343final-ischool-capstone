@@ -182,8 +182,9 @@ img.tiles {
     background-color: 
 }
 
-h1.tiles {
-    font-size: 15em;
+#indexTitles {
+    font-size: 18px;
+    font-weight: bold;
 }
 
 p.blurb {
