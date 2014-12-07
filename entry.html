@@ -103,7 +103,7 @@
 
                     <div class="form-group col-md-9" id="form-description">
                         <label for="project-description">Description</label>
-                        <input type="text" name="description" id="project-description" class="form-control" placeholder="Enter the description of your project" ng-model="newCapstone.description" ng-class="{'is-error' : userForm.description.$invalid && submitted == true}" required/>
+                        <textarea name="description" id="project-description" class="form-control" placeholder="Enter the description of your project" ng-model="newCapstone.description" ng-class="{'is-error' : userForm.description.$invalid && submitted == true}" required></textarea>
                         <p ng-if="userForm.description.$invalid && submitted == true" class="help-block">Your project description is required.</p>
                     </div>
 
