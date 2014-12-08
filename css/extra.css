@@ -81,17 +81,6 @@ hr  {
     opacity: 0.5;
 }
 
-.team {
-    width : 200px;
-    height : 100px;
-    display : table-cell;
-    vertical-align : middle;
-    border : 2px solid #D7A900;
-    float: none;
-    background-color: #39275B;
-    color: #D7A900;
-}
-
 #share, #Description {
     color:#39275B
 }
@@ -150,6 +139,36 @@ hr  {
 }
 
 
+div.img-div{
+    height:200px;
+    width:200px;
+    overflow:hidden;
+    border-radius:50%;
+}
+
+.img-div img{
+    -webkit-transform:translate(-50%);
+    margin-left:100px;
+}
+
+.circle-image{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    display:block;
+    background-position-y:25% 
+}
+
+.team {
+    width : 50px;
+    height : 100px;
+    display : table-cell;
+    vertical-align : middle;
+    border : 2px solid #D7A900;
+    float: none;
+    background-color: #39275B;
+    color: #D7A900;
+}
 
 
 form-group {
@@ -193,6 +212,10 @@ h1.tiles {
 
 p.blurb {
 
+}
+
+.likes {
+    float: right;
 }
 <<<<<<< HEAD
 =======
