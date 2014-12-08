@@ -120,6 +120,11 @@ hr  {
     padding-bottom: 3em;
 }
 
+.description {
+    background-color: white;
+    padding-top: 20px;
+}
+
 
 #projectTextDisplay {
     font-weight: bold;
@@ -179,18 +184,13 @@ img.tiles {
 
 .tile {
     margin-bottom: 30px;
-    background-color: 
+    background-color: white; 
 }
 
-#indexTitles {
-    font-size: 18px;
-    font-weight: bold;
+h1.tiles {
+    font-size: 15em;
 }
 
 p.blurb {
 
-}
-
-#countdown {
-    font-size: 18px;
 }
