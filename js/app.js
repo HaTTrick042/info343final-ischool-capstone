@@ -10,6 +10,7 @@ angular.module('CapstonesList', [])
     })
     .controller('CapstonesController', function($scope, $http) {
         $scope.refreshCapstones = function() {
+            //refreshes the capstones on the index page
             $http.get(capstonesUrl)
                 .success(function(data) {
                     $scope.capstones = data.results;
@@ -17,14 +18,13 @@ angular.module('CapstonesList', [])
         };
         $scope.refreshCapstones();
 
+        //adds capstone feed to parse when form is submitted
         $scope.addCapstones = function() {
             $scope.inserting = true;
             $http.post(capstonesUrl, $scope.newCapstone)
                 .success(function(responseData) {
                     $scope.newCapstone.objectId = responseData.objectId;
                     $scope.capstones.push($scope.newCapstone);
-                    // $scope.refreshCapstones();
-
                 })
                 .finally(function() {
                     $scope.inserting = false;
@@ -37,10 +37,12 @@ angular.module('CapstonesList', [])
             if (isValid) {
                 $scope.addCapstones();
                 alert('Your entry has been received!');
+                window.location = 'index.html';
                 $scope.submitted = false;
             }
         };
 
+        //takes user to home page if they want to cancel the form
         $scope.cancel = function($location) {
             if (window.confirm("Do you really want to leave?")) {
                 window.location = 'index.html';
@@ -53,13 +55,8 @@ angular.module('CapstonesList', [])
         
         $scope.refreshCapstones();
 
-
+        //Does the filtering on the home page for capstones to be displayed
         $scope.filter = function() {
-          
-            // $http.get(capstonesUrl + '?where={"year":year.value}')
-            //     .success(function(data) {
-            //         $scope.capstones = data.results;
-            //     });
             $http.get(capstonesUrl)
                 .success(function(data) {
                 
@@ -86,9 +83,8 @@ angular.module('CapstonesList', [])
 
         };
 
-
+        //increments the likes on the home page
         $scope.incrementLikes = function(capstone, amount) {
-            $scope.updating = true;
             $http.put(capstonesUrl + '/' + capstone.objectId, {
                 likes: {
                     __op: 'Increment',
@@ -97,18 +93,13 @@ angular.module('CapstonesList', [])
             })
             .success(function(responseData) {
                 capstone.likes = responseData.likes;
-            }).error(function(err) {
-                console.log(err);
-                })
-            .finally(function() {
-                $scope.updating = false;
-            });
-
+            })
         };
-
     })
 
+    //second controller just for project.html
     .controller('ProjectController', function($scope, $http) {
+        //Gets the capstone that was clicked on on the home page and displays its info
         $scope.getCapstone = function() {
 
             var newUrl = window.location.pathname+window.location.search;
@@ -122,18 +113,11 @@ angular.module('CapstonesList', [])
                         return (project.objectId == objectId);
                     });
                 });
-            // $http.get(capstonesUrl + '/' + objectId)
-            //     // console.log(capstonesUrl + '/' + objectId)
-            //     .success(function(data) {
-
-            //         $scope.capstones = data.results;
-            //         console.log($scope.capstones);
-
-
-            //     });
         };
+
         $scope.getCapstone();
 
+        //allows user to toggle between pictures on the project.html page
         $scope.changePic = function(imgSrc) {
             document.getElementById("img-main").src = imgSrc;
         };
