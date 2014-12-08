@@ -13,8 +13,8 @@
     <body id='background'>
       <main class="container" ng-app="CapstonesList" ng-controller="CapstonesController">
             <section>
-                <h1>Submission Form for Capstone 2015</h1>
-                <h2>The deadline is <strong>June 1, 2015 11:59pm PST.</strong>
+                <h1 id="entryH1">Submission Form for Capstone 2015</h1>
+                <h2 id="entryH2">The deadline is <strong>June 1, 2015 11:59pm PST.</strong>
                 Learn about the process and requirements <a target="_blank" href="https://ischool.uw.edu/current/informatics/capstone">here.</a>
                 <br>Questions? Email Dowell Eugenio <a href="mailto:deugen3@uw.edu" target="_top">deugen3@uw.edu</a>.</h2>
 
@@ -79,10 +79,21 @@
                     </div>
 
                     <div class="form-group">
-                        <div class="col-md-6" id="form-projectName">
+                        <div class="col-md-3" id="form-projectName">
                             <label for="project-name">Capstone Project Name</label>
                             <input type="text" name="name" id="project-name" class="form-control" placeholder="Enter your capstone project name" ng-model="newCapstone.title" ng-class="{'is-error' : userForm.name.$invalid && submitted == true}" required/>
                             <p ng-if="userForm.name.$invalid && submitted == true" class="help-block">Your project name is required.</p>
+                        </div>
+
+                        <div class="col-md-3" id="form-type">
+                            <label>Competition Year</label>
+                              <select name="year" id="year" class="form-control" ng-model="newCapstone.year" ng-class="{'is-error' : userForm.year.$invalid && submitted == true}" required/>
+                                  <option value="" selected disabled>Year</option>
+                                  <option value="2014">2014</option>
+                                  <option value="2013">2013</option>
+                                  <option value="2012">2012</option>
+                              </select>
+                              <p ng-if="userForm.year.$invalid && submitted == true" class="help-block">Your competition year is required.</p>
                         </div>
 
                         <div class="col-md-3" id="form-type">
@@ -110,29 +121,27 @@
                     <div class="form-group col-md-9" id="form-blurb">
                         <label for="project-blurb">Blurb</label>
 
-                        <input type="text" name="blurb" id="inputPostMessage" class="form-control input-lg" placeholder="Enter the blurb of your project (max 150 characters)" ng-model="inputMessage" ng-model="newCapstone.blurb" ng-class="{'is-error' : userForm.blurb.$invalid && submitted == true}" required/>
+                        <input type="text" name="blurb" id="inputPostMessage" class="form-control" placeholder="Enter the blurb of your project (max 150 characters)" ng-model="newCapstone.blurb" ng-class="{'is-error' : userForm.blurb.$invalid && submitted == true}" required/>
                         <p ng-if="userForm.blurb.$invalid && submitted == true" class="help-block">Your project blurb is required.</p>
-
-                        <button id="btnPost" type="button" class="btn btn-success" ng-disabled="inputMessage.length < 5 || inputMessage.length >= 151" ng-class="{'btn-warning': inputMessage.length >= 120, 'btn-danger': inputMessage.length >= 141 }">{{ 150 - inputMessage.length }}</button>
                     </div>
 
                     <div class="form-group col-md-7" id="form-video">
                         <label for="project-video">Project Video</label>
-                        <input type="text" id="project-video" class="form-control" placeholder="Enter the link to your video." ng-model="newCapstone.video"/>
+                        <input type="text" id="project-video" class="form-control" placeholder="Enter a video URL" ng-model="newCapstone.video"/>
                     </div>
 
                     <div class="form-group col-md-7" id="form-img">
                         <label for="project-image" class="required-field" id="
                         project-image">Project Images (at least one)</label>
                         <br>
-                        <input type="text" name="image1" placeholder="Enter an image URL (required)" class="imageInput form-control" ng-model="newCapstone.image" ng-class="{'is-error' : userForm.image1.$invalid && submitted == true}" required/>
+                        <input type="text" name="image1" placeholder="Enter an image URL (required)" class="imageInput form-control" ng-model="newCapstone.images1" ng-class="{'is-error' : userForm.image1.$invalid && submitted == true}" required/>
                         <p ng-if="userForm.image1.$invalid && submitted == true" class="help-block">At least one image is required.</p>
                         <br>
-                        <input type="text" name="image2" ng-model="newCapstone.image2" class="imageInput form-control">
+                        <input type="text" name="image2" ng-model="newCapstone.images2" class="imageInput form-control">
                         <br>
-                        <input type="text" name="image3" ng-model="newCapstone.image3" class="imageInput form-control">
+                        <input type="text" name="image3" ng-model="newCapstone.images3" class="imageInput form-control">
                         <br>
-                        <input type="text" name="image4" ng-model="newCapstone.image4" class="imageInput form-control">
+                        <input type="text" name="image4" ng-model="newCapstone.images4" class="imageInput form-control">
                     </div>
 
                     <div class="form-group">

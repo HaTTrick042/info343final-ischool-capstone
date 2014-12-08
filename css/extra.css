@@ -121,7 +121,7 @@ hr  {
 }
 
 #submitButton {
-    margin-right: 1em;
+    margin-left: 1em;
 }
 
 .hover {
@@ -206,8 +206,9 @@ img.tiles {
     
 }
 
-h1.tiles {
-    font-size: 15em;
+#indexTitles {
+    font-size: 18px;
+    font-weight: bold;
 }
 
 p.blurb {
@@ -217,8 +218,6 @@ p.blurb {
 .likes {
     float: right;
 }
-<<<<<<< HEAD
-=======
 
 #countdown {
     font-size: 18px;
@@ -227,4 +226,11 @@ p.blurb {
 #projectHeader {
     font-size: 20px;
 }
->>>>>>> 9f55ce7ff50ce3e7c2f64f82dd6e70060b95e65e
+
+#entryH1 {
+    font-size: 22px;
+}
+
+#entryH2 {
+    font-size: 16px;
+}
