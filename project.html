@@ -33,7 +33,7 @@
             </section>
 
             <section id="Overview">
-                <div class="row col-xs-7  col-xl-7">
+                <div class="row col-xs-7 col-xl-7">
                     <img id="img-main" src="{{capstone.image.url}}" alt="Project Banner"/>
                 </div>
                 <div class="row col-xs-1 col-xl-1">
@@ -54,6 +54,9 @@
                         </div>
                         <div class="col-xs-2 col-xl-2">
                             <img class="img-responsive thumbnail" src="{{capstone.image4.url}}" alt="Thumb 4" ng-click="changePic(capstone.image4.url)" ng-hide="capstone.image4.url == null">
+                        </div>
+                        <div class="col-xs-2 col-xl-2">
+                            <a href="{{capstone.video}}"><img class="img-responsive thumbnail" src="img/video.png" alt="Thumb 5" ng-hide="capstone.video == null"></a>
                         </div>
                     </div>
                 </section>
